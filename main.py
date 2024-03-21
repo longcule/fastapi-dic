@@ -51,71 +51,71 @@ html = f"""
 """
 
 # up img to imgbb
-# def upload_images(image):
-#     url = "https://api.imgbb.com/1/upload"
-#     api_key = 'b99ea31917346513ac1e4047e79d7f5e'
-    
-#     with open(image, "rb") as file:
-#         payload = {
-#                 "key": api_key,
-#                 "image": base64.b64encode(file.read()),
-#         }
-#         response = requests.post(url, payload)
-            
-#         # Xử lý phản hồi từ máy chủ
-#         if response.status_code == 200:
-#                 result = response.json()
-#                 if result['status'] == 200:
-#                     return result['data']['url']
-#                 else:
-#                     return result['error']['message']
-#         else:
-#                 return "Error"
-
-def upload_images(image_data):
+def upload_images(image):
     url = "https://api.imgbb.com/1/upload"
     api_key = 'b99ea31917346513ac1e4047e79d7f5e'
     
-    # Tạo một tệp tạm thời và ghi dữ liệu từ 'UploadFile' vào tệp này
-    # with tempfile.NamedTemporaryFile(delete=False) as temp:
-    #     temp.write(image_data.read())
-    #     temp_path = temp.name
-    
-    # # Đọc dữ liệu ảnh từ tệp tạm thời
-    # image = Image.open(temp_path)
-    
-    # Tiến hành xử lý ảnh tại đây (ví dụ: thay đổi kích thước, áp dụng bộ lọc, v.v.)
-    # ...
-    
-    # Chuyển đổi ảnh thành dữ liệu base64
-    # buffered = io.BytesIO()
-    # image.save(buffered, format="JPEG")
-    # image_base64 = base64.b64encode(buffered.getvalue())
-
-    payload = {
-        "key": api_key,
-        "image": base64.b64encode(image_data.file.read()),
-    }
-    
-    response = requests.post(url, payload)
-    
-    # Xử lý phản hồi từ máy chủ
-    if response.status_code == 200:
-        result = response.json()
-        if result['status'] == 200:
-            image_url = result['data']['url']
-            # Xóa tệp tạm thời
-            # os.remove(temp_path)
-            return image_url
+    with open(image, "rb") as file:
+        payload = {
+                "key": api_key,
+                "image": base64.b64encode(file.read()),
+        }
+        response = requests.post(url, payload)
+            
+        # Xử lý phản hồi từ máy chủ
+        if response.status_code == 200:
+                result = response.json()
+                if result['status'] == 200:
+                    return result['data']['url']
+                else:
+                    return result['error']['message']
         else:
-            error_message = result['error']['message']
-            # Xóa tệp tạm thời
-            # os.remove(temp_path)
-            return error_message
-    else:
-        # Xóa tệp tạm thời
-        # os.remove(temp_path)
-        return "Error"
+                return "Error"
+
+# def upload_images(image_data):
+#     url = "https://api.imgbb.com/1/upload"
+#     api_key = 'b99ea31917346513ac1e4047e79d7f5e'
+    
+#     # Tạo một tệp tạm thời và ghi dữ liệu từ 'UploadFile' vào tệp này
+#     # with tempfile.NamedTemporaryFile(delete=False) as temp:
+#     #     temp.write(image_data.read())
+#     #     temp_path = temp.name
+    
+#     # # Đọc dữ liệu ảnh từ tệp tạm thời
+#     # image = Image.open(temp_path)
+    
+#     # Tiến hành xử lý ảnh tại đây (ví dụ: thay đổi kích thước, áp dụng bộ lọc, v.v.)
+#     # ...
+    
+#     # Chuyển đổi ảnh thành dữ liệu base64
+#     # buffered = io.BytesIO()
+#     # image.save(buffered, format="JPEG")
+#     # image_base64 = base64.b64encode(buffered.getvalue())
+
+#     payload = {
+#         "key": api_key,
+#         "image": base64.b64encode(image_data.file.read()),
+#     }
+    
+#     response = requests.post(url, payload)
+    
+#     # Xử lý phản hồi từ máy chủ
+#     if response.status_code == 200:
+#         result = response.json()
+#         if result['status'] == 200:
+#             image_url = result['data']['url']
+#             # Xóa tệp tạm thời
+#             # os.remove(temp_path)
+#             return image_url
+#         else:
+#             error_message = result['error']['message']
+#             # Xóa tệp tạm thời
+#             # os.remove(temp_path)
+#             return error_message
+#     else:
+#         # Xóa tệp tạm thời
+#         # os.remove(temp_path)
+#         return "Error"
 
 
 @app.get("/")
@@ -337,14 +337,16 @@ async def create_products(request: Request, src_img: List[UploadFile] = File(Non
         i = 0
         for items in src_img:
             file_name = f"{new_id}_{random.randint(0, 100000)}"
-            path_to_image = f"{img_path}{file_name}.png"
-            # with open(path_to_image, "wb") as image:
-            #     image.write(items.file.read())
-            link = upload_images(items)
+            path_to_image = f"/tmp/{file_name}.png"
+            with open(path_to_image, "wb") as image:
+                image.write(items.file.read())
+            link = upload_images(path_to_image)
             # link = f"{link_img_path}{file_name}.png"
             link_img = {'id': i,'link': link}
             list_link_img.append(link_img)
             i  = i + 1
+            if os.path.exists(path_to_image):
+                os.remove(path_to_image)
 
 
     new_product = {
