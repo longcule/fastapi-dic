@@ -10,6 +10,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from typing import Optional, List
 import base64
+from PIL import Image
+import io
 import requests
 app = FastAPI()
 app.mount("/image", StaticFiles(directory="image"), name="image")
@@ -48,28 +50,58 @@ html = f"""
 """
 
 # up img to imgbb
-def upload_images(image):
+# def upload_images(image):
+#     url = "https://api.imgbb.com/1/upload"
+#     api_key = 'b99ea31917346513ac1e4047e79d7f5e'
+    
+#     with open(image, "rb") as file:
+#         payload = {
+#                 "key": api_key,
+#                 "image": base64.b64encode(file.read()),
+#         }
+#         response = requests.post(url, payload)
+            
+#         # Xử lý phản hồi từ máy chủ
+#         if response.status_code == 200:
+#                 result = response.json()
+#                 if result['status'] == 200:
+#                     return result['data']['url']
+#                 else:
+#                     return result['error']['message']
+#         else:
+#                 return "Error"
+
+def upload_images(image_data):
     url = "https://api.imgbb.com/1/upload"
     api_key = 'b99ea31917346513ac1e4047e79d7f5e'
     
-    with open(image, "rb") as file:
-        payload = {
-                "key": api_key,
-                "image": base64.b64encode(file.read()),
-        }
-        response = requests.post(url, payload)
-            
-        # Xử lý phản hồi từ máy chủ
-        if response.status_code == 200:
-                result = response.json()
-                if result['status'] == 200:
-                    return result['data']['url']
-                else:
-                    return result['error']['message']
+    # Đọc dữ liệu ảnh từ image_data
+    image = Image.open(io.BytesIO(image_data))
+    
+    # Tiến hành xử lý ảnh tại đây (ví dụ: thay đổi kích thước, áp dụng bộ lọc, v.v.)
+    # ...
+
+    # Chuyển đổi ảnh thành dữ liệu base64
+    buffered = io.BytesIO()
+    image.save(buffered, format="JPEG")
+    image_base64 = base64.b64encode(buffered.getvalue())
+
+    payload = {
+        "key": api_key,
+        "image": image_base64,
+    }
+    
+    response = requests.post(url, payload)
+    
+    # Xử lý phản hồi từ máy chủ
+    if response.status_code == 200:
+        result = response.json()
+        if result['status'] == 200:
+            return result['data']['url']
         else:
-                return "Error"
-
-
+            return result['error']['message']
+    else:
+        return "Error"
 
 
 @app.get("/")
@@ -292,9 +324,9 @@ async def create_products(request: Request, src_img: List[UploadFile] = File(Non
         for items in src_img:
             file_name = f"{new_id}_{random.randint(0, 100000)}"
             path_to_image = f"{img_path}{file_name}.png"
-            with open(path_to_image, "wb") as image:
-                image.write(items.file.read())
-            link = upload_images(path_to_image)
+            # with open(path_to_image, "wb") as image:
+            #     image.write(items.file.read())
+            link = upload_images(items)
             # link = f"{link_img_path}{file_name}.png"
             link_img = {'id': i,'link': link}
             list_link_img.append(link_img)
