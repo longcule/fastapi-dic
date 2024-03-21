@@ -1,0 +1,50 @@
+[
+    {
+        "id": 52,
+        "word": "123",
+        "meaning": "2132",
+        "note": "21",
+        "image": [
+            {
+                "id": 0,
+                "link": "http://localhost:3000/Images/2_9953.png"
+            },
+            {
+                "id": 1,
+                "link": "http://localhost:3000/Images/2_9953.png"
+            }
+        ],
+        "user_add": "1232331",
+        "date": "20:54:38 14/03/2024",
+        "subject": "213232"
+    },
+    {
+        "id": 53,
+        "word": "123",
+        "meaning": "213",
+        "note": "21321",
+        "image": [
+            {
+                "id": 0,
+                "link": "http://localhost:3000/Images/2_9953.png"
+            },
+            {
+                "id": 1,
+                "link": "http://localhost:3000/Images/2_9953.png"
+            }
+        ],
+        "user_add": "1232331",
+        "date": "17:01:29 15/03/2024",
+        "subject": "3213"
+    },
+    {
+        "id": 54,
+        "word": "123",
+        "meaning": "12332",
+        "note": "21321",
+        "image": [],
+        "user_add": "1232331",
+        "date": "17:07:59 15/03/2024",
+        "subject": "312"
+    }
+]

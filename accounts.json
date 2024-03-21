@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "user_name": "linh",
+    "password": "123",
+    "image": "http://localhost:3000/Images/avatar.png",
+    "role": "admin",
+    "date": "14:00:27 16/01/2024"
+  },
+  {
+    "id": 2,
+    "user_name": "linhh",
+    "password": "123",
+    "image": "http://localhost:3000/Images/avatar.png",
+    "role": "admin",
+    "date": "14:00:27 16/01/2024"
+  },
+  {
+    "id": 1,
+    "user_name": "1232331",
+    "password": "312321321321",
+    "image": "http://localhost:3000/Images/avatar.png",
+    "role": "admin",
+    "date": "14:00:27 16/01/2024"
+  },
+  {
+    "id": 2,
+    "user_name": "1234",
+    "password": "312322",
+    "image": "http://localhost:3000/Images/avatar.png",
+    "role": "admin",
+    "date": "14:00:27 16/01/2024"
+  },
+  {
+    "id": 136,
+    "user_name": "123123",
+    "password": "3123123213",
+    "image": "http://localhost:3000/Images/avatar.png",
+    "role": "admin",
+    "date": "14:00:27 16/01/2024"
+  },
+  {
+    "id": 16,
+    "user_name": "123",
+    "password": "3123",
+    "image": "http://localhost:3000/Images/avatar.png",
+    "role": "admin",
+    "date": "14:00:27 16/01/2024"
+  }
+]

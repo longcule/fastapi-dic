@@ -1,0 +1,362 @@
+[
+    {
+        "id": 6,
+        "word": "Masseter muscle",
+        "meaning": "C\u01a1 C\u1eafn",
+        "note": "-Nguy\u00ean \u1ee7y: cung g\u00f2 m\u00e1 -B\u00e1m t\u1eadn: ng\u00e0nh h\u00e0m v\u00e0 g\u00f3c h\u00e0m -\u0110\u1ed9ng t\u00e1c c\u1ee7a c\u01a1 c\u1eafn: Kh\u00e9p h\u00e0m, nghi\u1ebfn r\u0103ng",
+        "image": [
+            "http://localhost:3000/Images/6_84761.png"
+        ],
+        "user_add": "long",
+        "date": "20:31:33 15/01/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 7,
+        "word": "Musculus depressor labil inferioris",
+        "meaning": "C\u01a1 h\u1ea1 m\u00f4i",
+        "note": "-Nguy\u00ean \u1ee7y: m\u1eb7t ngo\u00e0i x\u01b0\u01a1ng h\u00e0m d\u01b0\u1edbi, gi\u1eefa \u0111\u01b0\u1eddng gi\u1eefa x\u01b0\u01a1ng h\u00e0m d\u01b0\u1edbi v\u00e0 l\u1ed7 c\u1eb1m -B\u00e1m t\u1eadn: Da m\u00f4i d\u01b0\u1edbi -\u0110\u1ed9ng t\u00e1c c\u1ee7a c\u01a1 h\u1ea1 m\u00f4i d\u01b0\u1edbi :k\u00e9o m\u00f4i d\u01b0\u1edbi xu\u1ed1ng d\u01b0\u1edbi v\u00e0 ra ngo\u00e0i (th\u1ec3 hi\u1ec7n c\u1ea3m x\u00fac m\u1ec9a mai)",
+        "image": [
+            "http://localhost:3000/Images/7_98742.png"
+        ],
+        "user_add": "long",
+        "date": "20:31:33 15/01/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 8,
+        "word": "Temporal muscle",
+        "meaning": "C\u01a1 th\u00e1i d\u01b0\u01a1ng",
+        "note": "Nguy\u00ean \u1ee7y: s\u00e0n c\u1ee7a h\u1ed1 th\u00e1i d\u01b0\u01a1ng v\u00e0 m\u1ea1c th\u00e1i d\u01b0\u01a1ng. B\u00e1m t\u1eadn: b\u1edd tr\u01b0\u1edbc m\u1ecfm qu\u1ea1, b\u1edd tr\u01b0\u1edbc ng\u00e0nh h\u00e0m d\u01b0\u1edbi. \u0110\u1ed9ng t\u00e1c: n\u00e2ng h\u00e0m d\u01b0\u1edbi l\u00ean, k\u00e9o h\u00e0m d\u01b0\u1edbi ra sau, nghi\u1ebfn r\u0103ng. Th\u1ea7n kinh: c\u00e1c nh\u00e1nh th\u00e1i d\u01b0\u01a1ng s\u00e2u thu\u1ed9c th\u1ea7n kinh h\u00e0m d\u01b0\u1edbi",
+        "image": [
+            "http://localhost:3000/Images/8_42607.png"
+        ],
+        "user_add": "long",
+        "date": "20:31:33 15/01/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 20,
+        "word": "Parotid gland",
+        "meaning": "Tuy\u1ebfn n\u01b0\u1edbc b\u1ecdt mang tai",
+        "note": "- V\u1ecb tr\u00ed: N\u1eb1m \u1edf 2 b\u00ean mi\u1ec7ng v\u00e0 n\u1eb1m tr\u01b0\u1edbc 2 b\u00ean tai. - L\u00e0 2 tuy\u1ebfn n\u01b0\u1edbc b\u1ecdt c\u00f3 k\u00edch th\u01b0\u1edbc l\u1edbn nh\u1ea5t. - M\u1ed7i tuy\u1ebfn n\u01b0\u1edbc b\u1ecdt mang tai s\u1ebd bao b\u1ecdc xung quanh ng\u00e0nh l\u00ean x\u01b0\u01a1ng h\u00e0m v\u00e0 ti\u1ebft ra n\u01b0\u1edbc b\u1ecdt th\u00f4ng qua \u1ed1ng Stensen, \u0111\u1ec3 thu\u1eadn l\u1ee3i cho vi\u1ec7c nhai, nu\u1ed1t, ti\u00eau ho\u00e1 th\u1ee9c \u0103n.",
+        "image": [
+            "http://localhost:3000/Images/20_98048.png"
+        ],
+        "user_add": "longadmin",
+        "date": "09:31:15 20/01/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 21,
+        "word": "Risorius muscle",
+        "meaning": "C\u01a1 c\u01b0\u1eddi",
+        "note": "-Nguy\u00ean \u1ee7y: M\u1ea1c c\u01a1 c\u1eafn(fascia masseterica)  -B\u00e1m t\u1eadn: da g\u00f3c mi\u1ec7ng   -\u0110\u1ed9ng t\u00e1c: k\u00e9o g\u00f3c mi\u1ec7ng theo chi\u1ec1u ngang(c\u01b0\u1eddi m\u1ec9m)",
+        "image": [
+            "http://localhost:3000/Images/21_3056.png"
+        ],
+        "user_add": "longadmin",
+        "date": "09:31:25 20/01/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 22,
+        "word": "Depressor angula oris muscle",
+        "meaning": "C\u01a1 h\u1ea1 g\u00f3c mi\u1ec7ng",
+        "note": "-Nguy\u00ean \u1ee7y : \u0110\u01b0\u1eddng ch\u00e9o c\u1ee7a x\u01b0\u01a1ng h\u00e0m d\u01b0\u1edbi (li\u00ean t\u1ee5c v\u1edbi c\u01a1 b\u00e1m da c\u1ed5). - B\u00e1m t\u1eadn : Da g\u00f3c mi\u1ec7ng  v\u00e0 c\u01a1 v\u00f2ng mi\u1ec7ng. -\u0110\u1ed9ng t\u00e1c : K\u00e9o g\u00f3c mi\u1ec7ng xu\u1ed1ng d\u01b0\u1edbi (bu\u1ed3n b\u00e3). ",
+        "image": [
+            "http://localhost:3000/Images/22_34197.png",
+            "http://localhost:3000/Images/22_11244.png"
+        ],
+        "user_add": "longadmin",
+        "date": "09:33:08 20/01/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 23,
+        "word": "Gingiva",
+        "meaning": "N\u01b0\u1edbu/l\u1ee3i",
+        "note": "vnvbn",
+        "image": [
+            "http://localhost:3000/Images/23_8440.png",
+            "http://localhost:3000/Images/23_44233.png",
+            "http://localhost:3000/Images/23_78036.png"
+        ],
+        "user_add": "1232331",
+        "date": "20:07:56 21/01/2024",
+        "subject": "NHA CHU"
+    },
+    {
+        "id": 24,
+        "word": "Gingivitis",
+        "meaning": "Vi\u00eam n\u01b0\u1edbu",
+        "note": "gcb",
+        "image": [
+            "http://localhost:3000/Images/24_48494.png"
+        ],
+        "user_add": "1232331",
+        "date": "20:12:39 21/01/2024",
+        "subject": "NHA CHU"
+    },
+    {
+        "id": 25,
+        "word": "Localised gingivitis",
+        "meaning": "vi\u00eam n\u01b0\u1edbu khu tr\u00fa",
+        "note": "3213213",
+        "image": [],
+        "user_add": "long ne12342",
+        "date": "22:40:57 27/02/2024",
+        "subject": "NHA CHU"
+    },
+    {
+        "id": 26,
+        "word": "Generalised gingivitis",
+        "meaning": "Vi\u00eam n\u01b0\u1edbu to\u00e0n b\u1ed9",
+        "note": "haha",
+        "image": [],
+        "user_add": "linh",
+        "date": "22:42:51 27/02/2024",
+        "subject": "NHA CHU"
+    },
+    {
+        "id": 27,
+        "word": "Periodontal",
+        "meaning": "M\u00f4 nha chu",
+        "note": "l\u00e0 t\u1ed5 ch\u1ee9c bao quanh r\u0103ng, bao g\u1ed3m m\u00f4 c\u1ee9ng v\u00e0 m\u1ec1m, c\u00f3 ch\u1ee9c n\u0103ng h\u1ed7 tr\u1ee3 v\u00e0 gi\u1eef ch\u00e2n r\u0103ng \u1ed5n \u0111\u1ecbnh trong x\u01b0\u01a1ng h\u00e0m",
+        "image": [
+            "http://localhost:3000/Images/27_96823.png"
+        ],
+        "user_add": "linh",
+        "date": "21:56:55 29/02/2024",
+        "subject": "NHA CHU"
+    },
+    {
+        "id": 28,
+        "word": "Calculus",
+        "meaning": "Cao r\u0103ng",
+        "note": "Dental calculus is calcified dental plaque: cao r\u0103ng l\u00e0 do s\u1ef1 canxi h\u00f3a c\u1ee7a m\u1ea3ng b\u00e1m r\u0103ng",
+        "image": [
+            "http://localhost:3000/Images/28_21213.png"
+        ],
+        "user_add": "linh",
+        "date": "22:00:29 29/02/2024",
+        "subject": "NHA CHU"
+    },
+    {
+        "id": 29,
+        "word": "Apical cyst",
+        "meaning": "Nang quanh ch\u00f3p",
+        "note": "Nang quanh ch\u00f3p - R\u0103ng b\u1ecb ch\u1ebft t\u1ee7y - Th\u1ea5u quang \u0111\u1ed3ng nh\u1ea5t h\u01a1n - K\u00edch th\u01b0\u1edbc l\u1edbn - Th\u1eddi gian l\u00e0nh th\u01b0\u01a1ng cho 10mm l\u00e0 2,5 n\u0103m",
+        "image": [
+            "http://localhost:3000/Images/29_97420.png"
+        ],
+        "user_add": "linh",
+        "date": "22:07:49 29/02/2024",
+        "subject": "B\u1ec6NH H\u1eccC MI\u1ec6NG"
+    },
+    {
+        "id": 30,
+        "word": "Parotitis",
+        "meaning": "Vi\u00eam tuy\u1ebfn mang tai",
+        "note": "NN: do vi r\u00fat, vk .          Do virus                         LS: S\u01b0ng , \u0111au v\u00f9ng tuy\u1ebfn , s\u1edd \u0111au , n\u00f3ng , ni\u00eam m\u1ea1c mi\u1ec7ng kh\u00f4 \u0111\u1ecf , gi\u1ea3m ti\u1ebft n\u01b0\u1edbc b\u1ecdt                          L\u1ed7 \u1ed1ng stenon n\u1ec1, \u0111\u1ecf , c\u00f3 m\u1ee7 n\u1ebfu b\u1ed9i nhi\u1ec5m        Bi\u1ebfn ch\u1ee9ng ; vi\u00eam tinh to\u00e0n hay g\u1eb7p",
+        "image": [
+            "http://localhost:3000/Images/30_12304.png"
+        ],
+        "user_add": "linh",
+        "date": "22:09:28 29/02/2024",
+        "subject": "B\u1ec6NH H\u1eccC MI\u1ec6NG"
+    },
+    {
+        "id": 31,
+        "word": "Geographic tongue",
+        "meaning": "L\u01b0\u1ee1i b\u1ea3n \u0111\u1ed3",
+        "note": "\u0111\u1eb7c \u0111i\u1ec3m ls: t\u1ed5n th\u01b0\u01a1ng t\u1ed3n t\u1ea1i th\u1eddi gian ng\u1eafn trong 1 khu v\u1ef1c, bi\u1ebfn m\u1ea5t trong v\u00f2ng v\u00e0i ng\u00e0y v\u00e0 ph\u00e1t tri\u1ec3n \u1edf 1 khu v\u1ef1c kh\u00e1c. \u0111i\u1ec1u tr\u1ecb: k c\u1ea7n thi\u1ebft, sau 1 th\u1eddi gian t\u1ef1 h\u1ebft",
+        "image": [
+            "http://localhost:3000/Images/31_93241.png"
+        ],
+        "user_add": "linh",
+        "date": "22:10:43 29/02/2024",
+        "subject": "B\u1ec6NH H\u1eccC MI\u1ec6NG"
+    },
+    {
+        "id": 32,
+        "word": "Pericoronitis",
+        "meaning": "Vi\u00eam quanh th\u00e2n r\u0103ng",
+        "note": "NN: th\u01b0\u1eddng do r\u0103ng kh\u00f4n h\u00e0m d\u01b0\u1edbi Kh\u00e1m t\u1ea1i ch\u1ed7: th\u01b0\u1eddng c\u00f3 l\u1ee3i tr\u00f9m che m\u1ed9t ph\u1ea7n hay to\u00e0n b\u1ed9 m\u1eb7t nhai \u0110i\u1ec1u tr\u1ecb: nh\u1ed5 r\u0103ng kh\u00f4n m\u1ecdc l\u1ec7ch hay m\u1ecdc ng\u1ea7m, ho\u1eb7c ch\u1ec9 c\u1eaft l\u1ee3i tr\u00f9m",
+        "image": [
+            "http://localhost:3000/Images/32_15055.png"
+        ],
+        "user_add": "linh",
+        "date": "22:11:59 29/02/2024",
+        "subject": "B\u1ec6NH H\u1eccC MI\u1ec6NG"
+    },
+    {
+        "id": 33,
+        "word": "Odontogenic keratocyst",
+        "meaning": "Nang s\u1eebng do r\u0103ng",
+        "note": "Ph\u00e1t sinh t\u1eeb ph\u1ea7n c\u00f2n l\u1ea1i c\u1ee7a t\u1ebf b\u00e0o l\u00e1 r\u0103ng - th\u01b0\u1eddng xu\u1ea5t hi\u1ec7n \u1edf h\u00e0m d\u01b0\u1edbi, v\u00f9ng g\u00f3c h\u00e0m - Kh\u00f4ng g\u00e2y ph\u1ed3ng x\u01b0\u01a1ng \u0110i\u1ec1u tr\u1ecb: b\u00f3c t\u00e1ch l\u1ea5y nang v\u00e0 n\u1ea1o",
+        "image": [
+            "http://localhost:3000/Images/33_50205.png"
+        ],
+        "user_add": "linh",
+        "date": "22:12:57 29/02/2024",
+        "subject": "B\u1ec6NH H\u1eccC MI\u1ec6NG"
+    },
+    {
+        "id": 34,
+        "word": "Torus palatinus",
+        "meaning": "L\u1ed3i x\u01b0\u01a1ng kh\u1ea9u c\u00e1i",
+        "note": "L\u00e0 m\u1ed9t u x\u01b0\u01a1ng l\u00e0nh t\u00ednh \u1edf x\u01b0\u01a1ng h\u00e0m  B\u00ecnh th\u01b0\u1eddng kh\u00f4ng c\u1ea7n ph\u1eabu thu\u1eadt, ch\u1ec9 can thi\u1ec7p ph\u1eabu thu\u1eadt khi n\u00f3 ph\u00e1t tri\u1ec3n qu\u00e1 l\u1edbn l\u00e0m \u1ea3nh h\u01b0\u1edfng \u0111\u1ebfn t\u00e2m l\u00fd, ch\u1ee9c n\u0103ng nhai, nu\u1ed1t, n\u00f3i v\u00e0 l\u00e0m c\u1ea3n tr\u1edf khi \u0111i\u1ec1u tr\u1ecb ph\u1ee5c h\u00ecnh r\u0103ng gi\u1ea3",
+        "image": [
+            "http://localhost:3000/Images/34_75707.png"
+        ],
+        "user_add": "linh",
+        "date": "22:14:08 29/02/2024",
+        "subject": "B\u1ec6NH H\u1eccC MI\u1ec6NG"
+    },
+    {
+        "id": 35,
+        "word": "Temporomandibular disorders",
+        "meaning": "R\u1ed1i lo\u1ea1n th\u00e1i d\u01b0\u01a1ng h\u00e0m",
+        "note": "Thu\u1eadt ng\u1eef mi\u00eau t\u1ea3 c\u00e1c r\u1ed1i lo\u1ea1n \u1edf kh\u1edbp v\u00e0 c\u00e1c b\u1ea5t th\u01b0\u1eddng \u1edf ch\u1ee9c n\u0103ng c\u1ee7a h\u1ec7 th\u1ed1ng nha",
+        "image": [
+            "http://localhost:3000/Images/35_94797.png"
+        ],
+        "user_add": "linh",
+        "date": "22:17:18 29/02/2024",
+        "subject": "B\u1ec6NH H\u1eccC MI\u1ec6NG"
+    },
+    {
+        "id": 36,
+        "word": "Recurrent aphthous stomatitis-RAS",
+        "meaning": "\u00c1p t\u01a1 ni\u00eam m\u1ea1c mi\u1ec7ng",
+        "note": "L\u00e0 b\u1ec7nh th\u01b0\u1eddng g\u1eb7p, h\u1ea7u h\u1ebft ng\u01b0\u1eddi l\u1edbn \u0111\u00e3 t\u1eebng b\u1ecb \u00e1pto trong cu\u1ed9c \u0111\u1eddi - ban \u0111\u1ea7u l\u00e0 nh\u1eefng s\u1ea9n, d\u00e1t \u0111\u1ecf, nh\u1ecf, \u0111au. Sau \u0111\u00f3 l\u00e0 v\u1ebft lo\u00e9t, ph\u1ee7 gi\u1ea3 m\u1ea1c v\u00e0ng, b\u1edd vi\u00eam \u0111\u1ecf, r\u00f5 - V\u1ecb tr\u00ed: \u1edf ni\u00eam m\u1ea1c mi\u1ec7ng h\u1ea7u, h\u1eadu m\u00f4n sinh d\u1ee5c - Th\u01b0\u1eddng t\u1ef1 gi\u1edbi h\u1ea1n, l\u00e0nh kh\u00f4ng \u0111\u1ec3 l\u1ea1i s\u1eb9o",
+        "image": [
+            "http://localhost:3000/Images/36_70989.png"
+        ],
+        "user_add": "linh",
+        "date": "22:18:41 29/02/2024",
+        "subject": "B\u1ec6NH H\u1eccC MI\u1ec6NG"
+    },
+    {
+        "id": 37,
+        "word": "Musculus zygomaticus minor",
+        "meaning": "C\u01a1 g\u00f2 m\u00e1 nh\u1ecf",
+        "note": "Nguy\u00ean \u1ee7y: m\u1eb7t ngo\u00e0i x\u01b0\u01a1ng g\u00f2 m\u00e1,sau \u0111\u01b0\u1eddng kh\u1edbp g\u00f2 m\u00e1-x\u01b0\u01a1ng h\u00e0m tr\u00ean.   B\u00e1m t\u1eadn: m\u00f4i tr\u00ean (gi\u1eefa c\u01a1 n\u00e2ng m\u00f4i tr\u00ean v\u00e0 c\u01a1 g\u00f2 m\u00e1 l\u1edbn).   \u0110\u1ed9ng t\u00e1c: k\u00e9o m\u00f4i tr\u00ean l\u00ean tr\u00ean v\u00e0 ra ngo\u00e0i.",
+        "image": [
+            "http://localhost:3000/Images/37_39381.png"
+        ],
+        "user_add": "linh",
+        "date": "23:01:45 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 38,
+        "word": "Orbicular muscle of eye",
+        "meaning": "C\u01a1 v\u00f2ng mi",
+        "note": "Nguy\u00ean u\u1ef7: b\u1edd trong \u1ed5 m\u1eaft, d\u00e2y ch\u1eb1ng mi m\u1eaft v\u00e0 x\u01b0\u01a1ng l\u1ec7 Nguy\u00ean u\u1ef7: b\u1edd trong \u1ed5 m\u1eaft, d\u00e2y ch\u1eb1ng mi m\u1eaft v\u00e0 x\u01b0\u01a1ng l\u1ec7 \u0111\u1ed9ng t\u00e1c: \u0111\u00f3ng m\u1edf mi m\u1eaft",
+        "image": [
+            "http://localhost:3000/Images/38_84015.png"
+        ],
+        "user_add": "linh",
+        "date": "23:04:06 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 39,
+        "word": "Nasalis Muscle",
+        "meaning": "C\u01a1 m\u0169i",
+        "note": "G\u1ed3m ph\u1ea7n ngang v\u00e0 ph\u1ea7n c\u00e1nh: Ph\u1ea7n ngang:  Nguy\u00ean u\u1ef7: \u1edf tr\u00ean v\u00e0 ngo\u00e0i h\u1ed1 r\u0103ng c\u1eeda x\u01b0\u01a1ng h\u00e0m tr\u00ean B\u00e1m t\u1eadn: c\u00e2n tr\u00ean c\u00e1c s\u1ee5n m\u0169i \u0110\u1ed9ng t\u00e1c: k\u00e9o c\u00e1nh m\u0169i v\u1ec1 ph\u00eda v\u00e1ch m\u0169i, l\u00e0m kh\u00e9p l\u1ed7 m\u0169i Ph\u1ea7n c\u00e1nh: Nguy\u00ean u\u1ef7: b\u1edd khuy\u1ebft m\u0169i x\u01b0\u01a1ng h\u00e0m tr\u00ean v\u00e0 s\u1ee5n c\u00e1nh m\u0169i l\u1edbn B\u00e1m t\u1eadn: da g\u1ea7n b\u1edd l\u1ed7 m",
+        "image": [
+            "http://localhost:3000/Images/39_23890.png"
+        ],
+        "user_add": "linh",
+        "date": "23:05:22 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 40,
+        "word": "Greater zygomatic muscle ",
+        "meaning": "C\u01a1 g\u00f2 m\u00e1 l\u1edbn",
+        "note": "Nguy\u00ean \u1ee7y: M\u1eb7t ngo\u00e0i ph\u1ea7n g\u00f2 m\u00e1 c\u1ee7a cung g\u00f2 m\u00e1. B\u00e1m t\u1eadn: G\u00f3c mi\u1ec7ng. \u0110\u1ed9ng t\u00e1c: K\u00e9o g\u00f3c mi\u1ec7ng l\u00ean tr\u00ean v\u00e0 ra sau (c\u01b0\u1eddi).",
+        "image": [
+            "http://localhost:3000/Images/40_20212.png"
+        ],
+        "user_add": "linh",
+        "date": "23:06:45 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 41,
+        "word": "Levaior labii superioris muscle",
+        "meaning": "C\u01a1 n\u00e2ng m\u00f4i tr\u00ean c\u00e1nh m\u0169i",
+        "note": "Nguy\u00ean \u1ee7y: Ph\u1ea7n tr\u00ean m\u1ecfm tr\u00e1n x\u01b0\u01a1ng h\u00e0m tr\u00ean. B\u00e1m t\u1eadn: S\u1ee5n c\u00e1nh m\u0169i l\u1edbn, da m\u0169i v\u00e0 m\u00f4i tr\u00ean, h\u00f2a l\u1eabn v\u1edbi c\u01a1 n\u00e2ng m\u00f4i tr\u00ean. \u0110\u1ed9ng t\u00e1c: K\u00e9o m\u00f4i l\u00ean tr\u00ean v\u00e0 l\u00e0m n\u1edf m\u0169i",
+        "image": [
+            "http://localhost:3000/Images/41_26192.png"
+        ],
+        "user_add": "linh",
+        "date": "23:08:29 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 42,
+        "word": "Mentalis muscle ",
+        "meaning": "C\u01a1 c\u1eb1m ",
+        "note": "Nguy\u00ean \u1ee7y: H\u1ed1 r\u0103ng c\u1eeda x\u01b0\u01a1ng h\u00e0m d\u01b0\u1edbi. B\u00e1m t\u1eadn: Da c\u1eb1m. \u0110\u1ed9ng t\u00e1c: \u0110\u01b0a m\u00f4i d\u01b0\u1edbi l\u00ean tr\u00ean v\u00e0 ra tr\u01b0\u1edbc, l\u00e0m nh\u0103n da c\u1eb1m, di\u1ec5n t\u1ea3 s\u1ef1 nghi ng\u1edd ho\u1eb7c khinh b\u1ec9.",
+        "image": [
+            "http://localhost:3000/Images/42_79407.png"
+        ],
+        "user_add": "linh",
+        "date": "23:09:55 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 43,
+        "word": "Levator labii superioris muscle ",
+        "meaning": "C\u01a1 n\u00e2ng m\u00f4i tr\u00ean",
+        "note": "Nguy\u00ean \u1ee7y: c\u00f3 hai ph\u1ea7n, ph\u1ea7n d\u01b0\u1edbi \u1ed5 m\u1eaft: b\u1edd d\u01b0\u1edbi n\u1ec1n \u1ed5 m\u1eaft v\u00e0 \u1edf ph\u00eda tr\u00ean l\u1ed7 d\u01b0\u1edbi \u1ed5 m\u1eaft; ph\u1ea7n g\u00f2 m\u00e1: m\u1eb7t ngo\u00e0i x\u01b0\u01a1ng g\u00f2 m\u00e1. B\u00e1m t\u1eadn: ph\u1ea7n d\u01b0\u1edbi \u1ed5 m\u1eaft: c\u00e1c c\u01a1 ph\u1ea7n ngo\u00e0i m\u00f4i tr\u00ean; ph\u1ea7n g\u00f2 m\u00e1: da c\u1ee7a r\u00e3nh m\u0169i m\u00f4i v\u00e0 m\u00f4i tr\u00ean. \u0110\u1ed9ng t\u00e1c: k\u00e9o g\u00f3c mi\u1ec7ng l\u00ean tr\u00ean, k\u00e9o m\u00f4i tr\u00ean ra ngo\u00e0i v\u00e0 l\u00ean tr\u00ean.",
+        "image": [
+            "http://localhost:3000/Images/43_66682.png",
+            "http://localhost:3000/Images/43_60359.png"
+        ],
+        "user_add": "linh",
+        "date": "23:10:05 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 44,
+        "word": "Buccinator muscle",
+        "meaning": "C\u01a1 m\u00fat",
+        "note": "Nguy\u00ean \u1ee7y: M\u1ecfm cung huy\u1ec7t r\u0103ng c\u1ee7a x\u01b0\u01a1ng h\u00e0m tr\u00ean v\u00e0 x\u01b0\u01a1ng h\u00e0m d\u01b0\u1edbi, \u0111\u1ed1i di\u1ec7n v\u1edbi ba r\u0103ng h\u00e0m, b\u1edd tr\u01b0\u1edbc c\u1ee7a v\u00e1ch gi\u1eefa ch\u00e2n b\u01b0\u1edbm h\u00e0m d\u01b0\u1edbi. B\u00e1m t\u1eadn:  C\u00e1c s\u1ee3i h\u1ed9i t\u1ee5 v\u1ec1 g\u00f3c mi\u1ec7ng li\u00ean k\u1ebft v\u1edbi c\u01a1 v\u00f2ng mi\u1ec7ng, c\u00e1c s\u1ee3i tr\u00ean di xu\u1ed1ng ph\u1ea7n d\u01b0\u1edbi v\u00e0 c\u00e1c s\u1ee3i d\u01b0\u1edbi \u0111i l\u00ean ph\u1ea7n tr\u00ean c\u1ee7a c\u01a1 n\u00e0y \u0110\u1ed9ng t\u00e1c:  \u00c9p m\u00e1 v\u00e0o r\u0103ng v\u00e0 l\u1ee3i r\u0103ng, gi\u00fap v\u00e0o s\u1ef1 nhai v\u00e0 m\u00fat",
+        "image": [
+            "http://localhost:3000/Images/44_27316.png"
+        ],
+        "user_add": "linh",
+        "date": "23:14:06 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 45,
+        "word": "Malleus",
+        "meaning": "X\u01b0\u01a1ng b\u00faa ",
+        "note": "Ch\u1ecfm b\u00faa h\u00ecnh c\u1ea7u, ti\u1ebfp kh\u1edbp v\u1edbi x\u01b0\u01a1ng \u0111e. Ch\u1ecfm n\u1ed1i v\u1edbi c\u00e1n b\u00faa \u1edf c\u1ed5 b\u00faa .C\u00e1n b\u00faa \u00e1p s\u00e1t v\u00e0o m\u1eb7t trong m\u00e0ng nh\u0129, \u0111\u1ea7u c\u00e1n b\u00faa c\u00f3 c\u01a1 c\u0103ng m\u00e0ng nh\u0129 b\u00e1m v\u00e0o.  M\u1ecfm tr\u01b0\u1edbc d\u00e0i, c\u00f3 d\u00e2y ch\u1eb1ng b\u00faa tr\u01b0\u1edbc b\u00e1m v\u00e0o .M\u1ecfm ngo\u00e0i ng\u1eafn, c\u00f3 d\u00e2y ch\u1eb1ng b\u00faa ngo\u00e0i b\u00e1m v\u00e0o",
+        "image": [
+            "http://localhost:3000/Images/45_18828.png"
+        ],
+        "user_add": "linh",
+        "date": "23:16:24 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    },
+    {
+        "id": 46,
+        "word": "Cochlea",
+        "meaning": "\u1ed0c Tai",
+        "note": "C\u00f3 h\u00ecnh nh\u01b0 con \u1ed1c, xo\u1eafn hai v\u00f2ng r\u01b0\u1ee1i. M\u1ed9t ph\u1ea7n \u0111\u00e1y \u1ed1c t\u1ea1o th\u00e0nh \u1ee5 nh\u00f4 \u1edf tai gi\u1eefa, \u0111\u1ec9nh \u1ed1c h\u01b0\u1edbng v\u1ec1 ph\u00eda tr\u01b0\u1edbc ngo\u00e0i. M\u1ea3nh xo\u1eafn \u1ed1c v\u00e0 \u1ed1ng \u1ed1c tai chia khoang ngo\u1ea1i d\u1ecbch c\u1ee7a \u1ed1c tai th\u00e0nh 2 ph\u1ea7n: thang ti\u1ec1n \u0111\u00ecnh v\u00e0 thang nh\u0129.",
+        "image": [
+            "http://localhost:3000/Images/46_75522.png"
+        ],
+        "user_add": "linh",
+        "date": "23:17:33 01/03/2024",
+        "subject": "GI\u1ea2I PH\u1eaaU H\u00c0M M\u1eb6T"
+    }
+]
