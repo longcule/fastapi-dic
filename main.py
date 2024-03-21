@@ -6,10 +6,14 @@ import os, random, json, shutil, datetime, psutil
 from PIL import Image
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse
 from typing import Optional, List
 import base64
 import requests
 app = FastAPI()
+app.mount("/image", StaticFiles(directory="image"), name="image")
+
 origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
@@ -24,6 +28,24 @@ img_path = './image/'
 link_img_path = 'http://localhost:3000/Images/'
 ################################
 
+html = f"""
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FastAPI on Vercel</title>
+    </head>
+    <body>
+        <div class="bg-gray-200 p-4 rounded-lg shadow-lg">
+            <h1>Hello from FastAPI</h1>
+            <ul>
+                <li><a href="/docs">/docs</a></li>
+                <li><a href="/redoc">/redoc</a></li>
+            </ul>
+            <p>Powered by <a href="https://vercel.com" target="_blank">Vercel</a></p>
+        </div>
+    </body>
+</html>
+"""
 
 # up img to imgbb
 def upload_images(image):
@@ -50,6 +72,9 @@ def upload_images(image):
 
 
 
+@app.get("/")
+async def root():
+    return HTMLResponse(html)
 
 # Handle products
 @app.get("/api/v1/product/show")
@@ -530,40 +555,6 @@ async def get_products_history(id_product: int):
     return JSONResponse(content=product)
 
 
-
-@app.get("/api/v1/performance")
-async def get_performance():
-    print("hallo")
-    content = []
-    per = {}
-    # CPU information
-    cpu_percent = psutil.cpu_percent()
-    cpu_count = psutil.cpu_count()
-    per['cpu_percent'] = cpu_percent
-    per['cpu_count'] = cpu_count
-
-    print(f"CPU Usage: {cpu_percent}%")
-    print(f"CPU Count: {cpu_count}")
-
-    # Memory information
-    memory = psutil.virtual_memory()
-    total_memory = memory.total // (1024 ** 3)  # Convert to GB
-    available_memory = memory.available // (1024 ** 3)  # Convert to GB
-    per['available_memory'] = available_memory
-    per['total_memory'] = total_memory
-    print(f"Total Memory: {total_memory}GB")
-    print(f"Available Memory: {available_memory}GB")
-
-    # Disk information
-    disk = psutil.disk_usage('/')
-    total_disk_space = disk.total // (1024 ** 3)  # Convert to GB
-    used_disk_space = disk.used // (1024 ** 3)  # Convert to GB
-    per['total_disk_space'] = total_disk_space
-    per['used_disk_space'] = used_disk_space
-    print(f"Total Disk Space: {total_disk_space}GB")
-    print(f"Used Disk Space: {used_disk_space}GB")
-    content.append(per)
-    return JSONResponse(content=content)
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000)
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
