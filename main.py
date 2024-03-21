@@ -77,24 +77,24 @@ def upload_images(image_data):
     api_key = 'b99ea31917346513ac1e4047e79d7f5e'
     
     # Tạo một tệp tạm thời và ghi dữ liệu từ 'UploadFile' vào tệp này
-    with tempfile.NamedTemporaryFile(delete=False) as temp:
-        temp.write(image_data.read())
-        temp_path = temp.name
+    # with tempfile.NamedTemporaryFile(delete=False) as temp:
+    #     temp.write(image_data.read())
+    #     temp_path = temp.name
     
-    # Đọc dữ liệu ảnh từ tệp tạm thời
-    image = Image.open(temp_path)
+    # # Đọc dữ liệu ảnh từ tệp tạm thời
+    # image = Image.open(temp_path)
     
     # Tiến hành xử lý ảnh tại đây (ví dụ: thay đổi kích thước, áp dụng bộ lọc, v.v.)
     # ...
     
     # Chuyển đổi ảnh thành dữ liệu base64
-    buffered = io.BytesIO()
-    image.save(buffered, format="JPEG")
-    image_base64 = base64.b64encode(buffered.getvalue())
+    # buffered = io.BytesIO()
+    # image.save(buffered, format="JPEG")
+    # image_base64 = base64.b64encode(buffered.getvalue())
 
     payload = {
         "key": api_key,
-        "image": image_base64,
+        "image": base64.b64encode(image_data.file.read()),
     }
     
     response = requests.post(url, payload)
@@ -105,16 +105,16 @@ def upload_images(image_data):
         if result['status'] == 200:
             image_url = result['data']['url']
             # Xóa tệp tạm thời
-            os.remove(temp_path)
+            # os.remove(temp_path)
             return image_url
         else:
             error_message = result['error']['message']
             # Xóa tệp tạm thời
-            os.remove(temp_path)
+            # os.remove(temp_path)
             return error_message
     else:
         # Xóa tệp tạm thời
-        os.remove(temp_path)
+        # os.remove(temp_path)
         return "Error"
 
 
