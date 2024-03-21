@@ -10,6 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from typing import Optional, List
 import base64
+import tempfile
 from PIL import Image
 import io
 import requests
@@ -75,12 +76,17 @@ def upload_images(image_data):
     url = "https://api.imgbb.com/1/upload"
     api_key = 'b99ea31917346513ac1e4047e79d7f5e'
     
-    # Đọc dữ liệu ảnh từ image_data
-    image = Image.open(io.BytesIO(image_data))
+    # Tạo một tệp tạm thời và ghi dữ liệu từ 'UploadFile' vào tệp này
+    with tempfile.NamedTemporaryFile(delete=False) as temp:
+        temp.write(image_data.read())
+        temp_path = temp.name
+    
+    # Đọc dữ liệu ảnh từ tệp tạm thời
+    image = Image.open(temp_path)
     
     # Tiến hành xử lý ảnh tại đây (ví dụ: thay đổi kích thước, áp dụng bộ lọc, v.v.)
     # ...
-
+    
     # Chuyển đổi ảnh thành dữ liệu base64
     buffered = io.BytesIO()
     image.save(buffered, format="JPEG")
@@ -97,10 +103,18 @@ def upload_images(image_data):
     if response.status_code == 200:
         result = response.json()
         if result['status'] == 200:
-            return result['data']['url']
+            image_url = result['data']['url']
+            # Xóa tệp tạm thời
+            os.remove(temp_path)
+            return image_url
         else:
-            return result['error']['message']
+            error_message = result['error']['message']
+            # Xóa tệp tạm thời
+            os.remove(temp_path)
+            return error_message
     else:
+        # Xóa tệp tạm thời
+        os.remove(temp_path)
         return "Error"
 
 
