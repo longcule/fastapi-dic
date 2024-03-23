@@ -28,7 +28,7 @@ app.add_middleware(
 )
 ################################
 #path_img
-img_path = '/tmp/'
+img_path = './image/'
 link_img_path = 'http://localhost:3000/Images/'
 ################################
 
@@ -169,6 +169,7 @@ user_add: Optional[str] = None, subject: Optional[str] = None, src_img: List[Upl
 
     collect = 'product'
     data_img = update_image(id_product, list_id_img, list_link_img, collect)
+    print(data_img)
     product = {}
     if word is not None:
         product["word"] = word
@@ -180,8 +181,9 @@ user_add: Optional[str] = None, subject: Optional[str] = None, src_img: List[Upl
         product["user_add"] = user_add
     if subject is not None:
         product["subject"] = subject
-    if src_img:
-        product["image"] = data_img
+
+    product["image"] = data_img
+
 
 
     update_prod_by_id(id_product, product, collect)
