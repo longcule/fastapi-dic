@@ -24,28 +24,10 @@
         "meaning": "213",
         "note": "21321",
         "image": [
-            {
-                "id": 0,
-                "link": "http://localhost:3000/Images/2_9953.png"
-            },
-            {
-                "id": 1,
-                "link": "http://localhost:3000/Images/2_9953.png"
-            }
         ],
         "user_add": "1232331",
         "date": "17:01:29 15/03/2024",
         "subject": "3213"
-    },
-    {
-        "id": 54,
-        "word": "123",
-        "meaning": "12332",
-        "note": "21321",
-        "image": [],
-        "user_add": "1232331",
-        "date": "17:07:59 15/03/2024",
-        "subject": "312"
     },
     {
         "id": 55,
@@ -53,14 +35,6 @@
         "meaning": "con m\u00e8o",
         "note": "con m\u00e8o k\u00eau mew mew",
         "image": [
-            {
-                "id": 0,
-                "link": "https://i.ibb.co/Hpk6gT8/860a0d56cf55.png"
-            },
-            {
-                "id": 1,
-                "link": "https://i.ibb.co/m975c94/f01215382064.png"
-            }
         ],
         "user_add": "linh",
         "date": "13:25:00 21/03/2024",

@@ -28,8 +28,8 @@ app.add_middleware(
 )
 ################################
 #path_img
-img_path = './image/'
-link_img_path = 'http://localhost:3000/Images/'
+img_path = '/tmp/'
+link_img_path = 'https://raw.githubusercontent.com/longcule/react-dic/main/public/logo192.png'
 ################################
 
 html = f"""
@@ -276,7 +276,7 @@ async def create_user(request: Request, src_img: UploadFile = File(None)):
     date = datetime.datetime.now().strftime('%H:%M:%S %d/%m/%Y')
 
 
-    link_img = f"{link_img_path}avatar.png"
+    link_img = "https://raw.githubusercontent.com/longcule/react-dic/main/public/logo192.png"
     file_name = f"item_{random.randint(0, 100000)}"
     path_to_image = f"{img_path}{file_name}.png"
     if src_img is not None:
