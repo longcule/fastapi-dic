@@ -19,10 +19,11 @@ def get_all_prod(collection_name):
     for item in items:
         item_dict = dict(item)
         item_dict['_id'] = str(item_dict['_id'])  # Convert ObjectId to string
-        if item_dict['image'] == None:
+        # print(type(item_dict['image']))
+        if not item_dict['image']:
+            # print("alooo")
             item_dict['image'].append(link_img)
-        else:
-            data.append(item_dict)
+        data.append(item_dict)
     return data
 
 # def get_all_prod(collection_name):
