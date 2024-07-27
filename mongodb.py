@@ -19,11 +19,23 @@ def get_all_prod(collection_name):
     for item in items:
         item_dict = dict(item)
         item_dict['_id'] = str(item_dict['_id'])  # Convert ObjectId to string
-        if item_dict['link'] == None:
-            item_dict['link'].append(link_img)
+        if item_dict['image'] == None:
+            item_dict['image'].append(link_img)
         data.append(item_dict)
     return data
 
+# def get_all_prod(collection_name):
+#     collection = db[collection_name]
+#     items = collection.find().sort("_id", -1)  # Sort by _id descending
+#     link_img = {'id': 0, 'link': 'https://raw.githubusercontent.com/longcule/react-dic/main/build/Y_png.jpg'}
+#     data = []
+#     for item in items:
+#         item_dict = dict(item)
+#         item_dict['_id'] = str(item_dict['_id'])  # Convert ObjectId to string
+#         if item_dict['image'] == None:  # Check for None (should be 'is None')
+#             item_dict['image'].append(link_img)  # This line would cause an error
+#         data.append(item_dict)
+#     return data
 
 def add_prod_to_collection(item, collection_name):
     # Connect to the database and select the collection
