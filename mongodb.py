@@ -13,7 +13,7 @@ collection = db['account']
 
 def get_all_prod(collection_name):
     collection = db[collection_name]
-    items = collection.find()
+    items = collection.find().sort("_id", -1)  # Sắp xếp theo _id từ lớn đến nhỏ
 
     data = []
     for item in items:
@@ -29,7 +29,7 @@ def add_prod_to_collection(item, collection_name):
     collection = db[collection_name]
     largest_id_item = collection.find_one(sort=[('id', -1)])
     
-
+    # item['id'] = 0
     item['id'] = largest_id_item['id'] + 1
     item_with_id_at_beginning = {'id': item['id']}
     item_with_id_at_beginning.update(item)
@@ -71,6 +71,7 @@ def update_prod_by_id(item_id, update_fields, collection_name):
 def update_image(id, list_id_img, list_add_img, collection_name):
     # Connect to the database and select the collection
     collection = db[collection_name]
+    print(list_id_img)
     # Retrieve the image IDs from the collection
     image_ids = []
     items = collection.find({"id": id})
@@ -81,14 +82,16 @@ def update_image(id, list_id_img, list_add_img, collection_name):
                 if "id" in image:
                     image_id = image["id"]
                     if image_id not in list_id_img:
+                        
                         image_inf = {"id": image_id, "link": image['link']}
                         image_ids.append(image_inf)
-
+    print(image_ids)
     k = 20
-    for item in list_add_img:
-        image_inf = {"id": k, "link": item}
-        image_ids.append(image_inf)
-        k = k+1
+    if list_add_img is not None:
+        for item in list_add_img:
+            image_inf = {"id": k, "link": item}
+            image_ids.append(image_inf)
+            k = k+1
     
     reindexed_image_ids = []
     for i, image in enumerate(image_ids):
@@ -102,8 +105,8 @@ def update_image(id, list_id_img, list_add_img, collection_name):
 
 # lis = [0]
 
-# list_add_img = []
-# print(get_image_ids(56, lis, list_add_img  ,'product'))
+# list_add_img = ['1', '2']
+# print(update_image(56, lis, list_add_img  ,'product'))
 
 def get_item_by_id(item_id, collection_name):
     collection = db[collection_name]

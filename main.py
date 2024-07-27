@@ -15,8 +15,11 @@ import tempfile
 from PIL import Image
 import io
 import requests
+
+from BaseModel import ProductCreateRequest, UserLoginRequest
+
 app = FastAPI()
-app.mount("/image", StaticFiles(directory="image"), name="image")
+# app.mount("/image", StaticFiles(directory="image"), name="image")
 
 origins = ["*"]
 app.add_middleware(
@@ -28,8 +31,8 @@ app.add_middleware(
 )
 ################################
 #path_img
-img_path = '/tmp/'
-link_img_path = 'https://raw.githubusercontent.com/longcule/react-dic/main/public/logo192.png'
+img_path = './image/'
+link_img_path = 'http://localhost:3000/Images/'
 ################################
 
 html = f"""
@@ -51,27 +54,45 @@ html = f"""
 </html>
 """
 
+
+
+
 # up img to imgbb
-def upload_images(image):
+def upload_images(image_base64):
     url = "https://api.imgbb.com/1/upload"
     api_key = 'b99ea31917346513ac1e4047e79d7f5e'
     
-    with open(image, "rb") as file:
-        payload = {
-                "key": api_key,
-                "image": base64.b64encode(file.read()),
-        }
-        response = requests.post(url, payload)
-            
-        # Xử lý phản hồi từ máy chủ
-        if response.status_code == 200:
-                result = response.json()
-                if result['status'] == 200:
-                    return result['data']['url']
-                else:
-                    return result['error']['message']
+    # with open(image, "rb") as file:
+    payload = {
+            "key": api_key,
+            "image": image_base64,
+    }
+    response = requests.post(url, payload)
+        
+    # Xử lý phản hồi từ máy chủ
+    # if response.status_code == 200:
+    #         result = response.json()
+    #         if result['status'] == 200:
+    #             return result['data']['url']
+    #         else:
+    #             return result['error']['message']
+    # else:
+    #         return "Error when upload image!"
+    if response.status_code == 200:
+        result = response.json()
+        if result['status'] == 200:
+            return result['data']['url']
+            print(f"Image uploaded successfully. URL: {result['data']['url']}")
         else:
-                return "Error"
+            return result['error']['message']
+            print(f"Error: {result['error']['message']}")
+    else:
+        try:
+            error_data = response.json()
+            return error_data['error']['message']
+        except:
+            return f"Error: {response.status_code} - {response.text}"
+
 
 # def upload_images(image_data):
 #     url = "https://api.imgbb.com/1/upload"
@@ -132,7 +153,7 @@ async def get_products():
     return data
 
 
-@app.patch("/api/v1/product/update/{id_product}")
+@app.post("/api/v1/product/update/{id_product}")
 def update_products(id_product: int, id_user_update: int, word: Optional[str] = None, list_id_img: Optional[str] = None, meaning: Optional[str] = None, note: Optional[str] = None, 
 user_add: Optional[str] = None, subject: Optional[str] = None, src_img: List[UploadFile] = File(None)):
  # Đường dẫn đến file CSV
@@ -205,13 +226,14 @@ def delete_products(id_product: int):
         # Trả về thông báo lỗi
 
 @app.post("/api/v1/product/add")
-async def create_products(request: Request, src_img: List[UploadFile] = File(None)):
-    form_data = await request.form()
-    word = form_data.get("word")
-    meaning = form_data.get("meaning")
-    note = form_data.get("note")
-    user_add = form_data.get("user_add")
-    subject = form_data.get("subject")
+async def create_products(request: Request, product: ProductCreateRequest):
+    # print(product)
+    word = product.word
+    meaning = product.meaning
+    note = product.note
+    user_add = product.user_add
+    subject = product.subject
+    src_img = product.image
     print("hallo")
 
     date = datetime.datetime.now().strftime('%H:%M:%S %d/%m/%Y')
@@ -221,18 +243,20 @@ async def create_products(request: Request, src_img: List[UploadFile] = File(Non
     if src_img is not None:
         i = 0
         for items in src_img:
-            file_name = f"item_{random.randint(0, 100000)}"
-            path_to_image = f"{img_path}{file_name}.png"
-            with open(path_to_image, "wb") as image:
-                image.write(items.file.read())
-            link = upload_images(path_to_image)
+            # file_name = f"item_{random.randint(0, 100000)}"
+            # path_to_image = f"{img_path}{file_name}.png"
+            # with open(path_to_image, "wb") as image:
+            #     image.write(items.file.read())
+            image_base64 = items['attachment']
+            # print(image_base64)
+            link = upload_images(image_base64)
+            # print(link)
             # link = f"{link_img_path}{file_name}.png"
             link_img = {'id': i,'link': link}
             list_link_img.append(link_img)
             i  = i + 1
-            if os.path.exists(path_to_image):
-                os.remove(path_to_image)
-
+            # if os.path.exists(path_to_image):
+            #     os.remove(path_to_image)
 
     new_product = {
         "word": word,
@@ -276,7 +300,7 @@ async def create_user(request: Request, src_img: UploadFile = File(None)):
     date = datetime.datetime.now().strftime('%H:%M:%S %d/%m/%Y')
 
 
-    link_img = "https://raw.githubusercontent.com/longcule/react-dic/main/public/logo192.png"
+    link_img = f"{link_img_path}avatar.png"
     file_name = f"item_{random.randint(0, 100000)}"
     path_to_image = f"{img_path}{file_name}.png"
     if src_img is not None:
@@ -403,12 +427,10 @@ def delete_users(id_user: int, id_user_delete: int):
 
 # Handle Login
 @app.post("/api/v1/user/login")
-async def login(request: Request):
-    form_data = await request.form()
-    user_name = form_data.get("user_name")
-    password = form_data.get("password")
+async def login(request: Request,  user: UserLoginRequest):
+    user_name = user.user_name
+    password = user.password
     user = find_account_by_username_and_password('account', user_name, password)
-
     return user
 
 # # Handle edit history
