@@ -14,13 +14,14 @@ collection = db['account']
 def get_all_prod(collection_name):
     collection = db[collection_name]
     items = collection.find().sort("_id", -1)  # Sắp xếp theo _id từ lớn đến nhỏ
-
+    link_img = {'id': 0,'link': 'https://raw.githubusercontent.com/longcule/react-dic/main/build/Y_png.jpg'}
     data = []
     for item in items:
         item_dict = dict(item)
         item_dict['_id'] = str(item_dict['_id'])  # Convert ObjectId to string
+        if item_dict['link'] == None:
+            item_dict['link'].append(link_img)
         data.append(item_dict)
-
     return data
 
 
