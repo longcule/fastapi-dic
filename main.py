@@ -215,7 +215,7 @@ def update_products(product: UpdateProductRequest):
     return {"message": "Thay đổi thông tin từ thành công!"}
 
 
-@app.delete("/api/v1/product/delete/{id_product}")
+@app.delete("/api/v1/product/delete")
 def delete_products(product: DeleteProductRequest):
     id_product = int(product.id_product)
     try:
