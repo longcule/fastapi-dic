@@ -63,9 +63,9 @@ def delete_item(item_id, collection_name):
 
     # Kiểm tra xem mục có được xóa thành công không
     if result.deleted_count == 1:
-        return "Mục đã được xóa thành công."
+        return {"message": f"Đã xóa {collection_name} thành công!"}
     else:
-        return "Không tìm thấy mục hoặc không thể xóa."
+        return {"message": f"Đã xảy ra lỗi khi xóa {collection_name}!"}
 
 
 
@@ -97,10 +97,9 @@ def update_image(id, list_id_img, list_add_img, collection_name):
                 if "id" in image:
                     image_id = image["id"]
                     if image_id not in list_id_img:
-                        
                         image_inf = {"id": image_id, "link": image['link']}
                         image_ids.append(image_inf)
-    print(image_ids)
+    # print(image_ids)
     k = 20
     if list_add_img is not None:
         for item in list_add_img:
@@ -143,6 +142,8 @@ def find_account_by_username_and_password(collection_name, username, password):
     if account:
         item_dict = dict(account)
         item_dict['_id'] = str(item_dict['_id'])  # Convert ObjectId to string
-        return item_dict
+        code = 200
+        return item_dict, code
     else:
-        return "Sai tên đăng nhập hoặc mật khẩu!"
+        code = 404
+        return "Sai tên đăng nhập hoặc mật khẩu!", code
