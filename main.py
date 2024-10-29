@@ -153,7 +153,7 @@ async def get_products():
     return data
 
 
-@app.post("/api/v1/product/update")
+@app.post("/api/v1/product/update/{id_product}")
 def update_products(product: UpdateProductRequest):
     id_product = product.id_product
     id_user_src = product.id_user_src
