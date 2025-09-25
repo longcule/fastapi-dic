@@ -12,7 +12,10 @@ class CreateProductRequest(BaseModel):
 
 class DeleteProductRequest(BaseModel):
     id_product: str
-
+    
+class ImageRequest(BaseModel):
+    url: str
+    
 class UpdateProductRequest(BaseModel):
     id_product: str
     id_user_src: str
@@ -45,4 +48,5 @@ class UpdateUserRequest(BaseModel):
 
 class DeleteUserRequest(BaseModel):
     id_user_src: str
+
     id_user_target: str
