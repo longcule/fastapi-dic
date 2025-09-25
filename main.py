@@ -141,27 +141,23 @@ def upload_images(image_base64):
 
 
 
-def get_image_response(url: str, auth=None):
-    try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
-            "Accept-Language": "en-US,en;q=0.9",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            "Referer": "https://www.google.com/",
-        }
-        response = requests.get(
-            url,
-            headers=headers,
-            auth=auth,
-            timeout=10,
-            verify=False,
-        )
-        # self.log(response.text, 'response')
-    except requests.exceptions.Timeout:
-        
-        return None
-    except Exception:
-        return None
+def get_image_response(url):
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "Referer": "https://www.google.com/",
+    }
+    response = requests.get(
+        url,
+        headers=headers,
+        auth=None,
+        timeout=10,
+        verify=False,
+    )
+    # self.log(response.text, 'response')
+
     return response
 
 # @app.get("/image")
@@ -492,6 +488,7 @@ async def login( user: LoginUserRequest):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
 
 
 
