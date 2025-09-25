@@ -164,22 +164,31 @@ def get_image_response(url: str, auth=None):
         return None
     return response
 
-@app.get("/image")
-async def get_image_data(url: str):
-    """
-    API endpoint to fetch an image from a URL and return it.
+# @app.get("/image")
+# async def get_image_data(url: str):
+#     """
+#     API endpoint to fetch an image from a URL and return it.
     
-    Args:
-        url (str): The URL of the image to fetch.
+#     Args:
+#         url (str): The URL of the image to fetch.
     
-    Returns:
-        Response: The image content with the correct media type.
-    """
-    image_response = get_image_response(url)
+#     Returns:
+#         Response: The image content with the correct media type.
+#     """
+#     image_response = get_image_response(url)
 
-    # Return the image content with the correct media type
+#     # Return the image content with the correct media type
+#     return image_response
+@app.post("/image")
+async def get_image_data(request: ImageRequest):
+    """
+    Endpoint API lấy hình ảnh từ một URL trong request body (JSON) và trả về dưới dạng response.
+    """
+    # Lấy URL từ request body
+    image_url = request.url
+    
+    image_response = get_image_response(image_url)
     return image_response
-
 
 
 
@@ -483,5 +492,6 @@ async def login( user: LoginUserRequest):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
 
 
