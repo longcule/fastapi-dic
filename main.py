@@ -15,7 +15,7 @@ import tempfile
 from PIL import Image
 import io
 import requests
-
+from requests.exceptions import SSLError
 from BaseModel import CreateProductRequest, DeleteProductRequest, UpdateProductRequest, LoginUserRequest, CreateUserRequest, UpdateUserRequest, DeleteUserRequest
 
 app = FastAPI()
@@ -138,6 +138,44 @@ def upload_images(image_base64):
 #         # Xóa tệp tạm thời
 #         # os.remove(temp_path)
 #         return "Error"
+
+
+
+def get_image_response(url: str, auth=None):
+    try:
+
+        response = requests.get(
+            url,
+            headers={"User-Agent": self.USER_AGENT},
+            auth=auth,
+            timeout=10,
+            verify=False,
+        )
+        # self.log(response.text, 'response')
+    except requests.exceptions.Timeout:
+        
+        return None
+    except Exception:
+        return None
+    return response
+
+@app.get("/image")
+async def get_image_data(url: str):
+    """
+    API endpoint to fetch an image from a URL and return it.
+    
+    Args:
+        url (str): The URL of the image to fetch.
+    
+    Returns:
+        Response: The image content with the correct media type.
+    """
+    image_response = get_image_response(url)
+
+    # Return the image content with the correct media type
+    return image_response
+
+
 
 
 @app.get("/")
@@ -440,3 +478,4 @@ async def login( user: LoginUserRequest):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
