@@ -180,7 +180,7 @@ def get_image_response(url: str, auth=None):
 #     # Return the image content with the correct media type
 #     return image_response
 @app.post("/image")
-async def get_image_data(request: ImageRequest):
+def get_image_data(request: ImageRequest):
     """
     Endpoint API lấy hình ảnh từ một URL trong request body (JSON) và trả về dưới dạng response.
     """
@@ -492,6 +492,7 @@ async def login( user: LoginUserRequest):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
 
 
 
