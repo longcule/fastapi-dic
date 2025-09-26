@@ -15,7 +15,6 @@ import tempfile
 from PIL import Image
 import io
 import requests
-from requests.exceptions import SSLError
 from BaseModel import CreateProductRequest, DeleteProductRequest, UpdateProductRequest, LoginUserRequest, CreateUserRequest, UpdateUserRequest, DeleteUserRequest
 
 app = FastAPI()
@@ -488,6 +487,7 @@ async def login( user: LoginUserRequest):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
 
 
 
